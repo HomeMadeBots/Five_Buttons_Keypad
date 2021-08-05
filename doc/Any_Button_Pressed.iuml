@@ -1,0 +1,11 @@
+@startuml
+
+class Any_Button_Pressed <<Event_Interface>>
+{
+  This event is sent when any switch of a five
+  buttons keypad is pressed.
+  --
+  + Pressed_Button:E_Button_Id
+}
+
+@enduml

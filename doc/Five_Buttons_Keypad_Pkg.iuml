@@ -1,0 +1,19 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.plantuml
+
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Five_Buttons_Keypad/main/doc/E_Button_Id.iuml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Five_Buttons_Keypad/main/doc/Any_Button_Pressed.iuml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Button_Events/main/doc/Button_Pressed.iuml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Five_Buttons_Keypad/main/doc/Five_Buttons_Keypad.iuml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Hardware_IO_Interfaces/main/doc/Analogic_Input_5.iuml
+
+note "The Five_Button_Keypad Component_Prototype provides\n5 ports realizing Button_Pressed interface for each button." as Note_1
+
+E_Button_Id <.down. Any_Button_Pressed : use
+Any_Button_Pressed <|..down.# "Any_Button_Pressed" Five_Buttons_Keypad
+Button_Pressed <|..down.# "Select_Button_Pressed\lRight_Button_Pressed\nLeft_Button_Pressed\nUp_Button_Pressed\nDown_Button_Pressed" Five_Buttons_Keypad
+Five_Buttons_Keypad - Note_1
+Five_Buttons_Keypad "Analog_Pin" #.down.> Analogic_Input_5
+
+@enduml
