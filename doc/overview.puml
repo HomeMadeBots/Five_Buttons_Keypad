@@ -11,9 +11,9 @@
 note "The Five_Button_Keypad_Sensor Component_Type provides\n5 ports realizing Button_Pressed interface for each button." as Note_1
 
 E_Button_Id <.down. Any_Button_Pressed : use
-Any_Button_Pressed <|..down.# "Any_Button_Pressed" Five_Button_Keypad_Sensor
-Button_Pressed <|..down.# "Select_Button_Pressed\lRight_Button_Pressed\nLeft_Button_Pressed\nUp_Button_Pressed\nDown_Button_Pressed" Five_Button_Keypad_Sensor
-Five_Button_Keypad_Sensor - Note_1
-Five_Button_Keypad_Sensor "Analog_Pin" #.down.> Analogic_Input_5
+Any_Button_Pressed <|..down.# "Any_Button_Pressed" Five_Buttons_Keypad_Sensor
+Button_Pressed <|..down.# "Select_Button_Pressed\lRight_Button_Pressed\nLeft_Button_Pressed\nUp_Button_Pressed\nDown_Button_Pressed" Five_Buttons_Keypad_Sensor
+Five_Buttons_Keypad_Sensor - Note_1
+Five_Buttons_Keypad_Sensor "Analog_Pin" #.down.> Analogic_Input_5
 
 @enduml
