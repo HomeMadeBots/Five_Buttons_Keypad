@@ -1,0 +1,24 @@
+@startuml
+
+class Five_Buttons_Keypad_Sensor <<Component_Type>>
+{
+  The role of the Five_Buttons_Keypad_Sensor Component_Type is to transform the
+  analogical signal of a keypad shield (with 5 buttons) into events representing
+  the key pressing occurrences.
+  Any button has to be released before an new x_Button_Pressed event can be
+  sent.
+  The event Any_Button_Pressed is sent after any other x_Button_Pressed.
+  The Cyclic() operation shall be called at a period from 5 ms to 10 ms for an
+  correct behavior.
+  It can be used for the LCD Keypad Shield for Arduino (DFR0009).
+  --
+  + Down_Button_Threshold:T_Voltage
+  + Left_Button_Threshold:T_Voltage
+  + No_Button_Threshold:T_Voltage
+  + Select_Button_Threshold:T_Voltage
+  + Up_Button_Threshold:T_Voltage
+  --
+  + Cyclic()
+}
+
+@enduml

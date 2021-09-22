@@ -1,4 +1,4 @@
-#include "Five_Buttons_Keypad.h"
+#include "Five_Buttons_Keypad_Sensor.h"
 
 
 /*============================================================================*/
@@ -10,7 +10,7 @@ typedef enum { KEYPAD_PRESSED, KEYPAD_RELEASED } E_Keypad_State;
 /*============================================================================*/
 /* Component_Operations */
 /*============================================================================*/
-void Five_Buttons_Keypad__Cyclic( const Five_Buttons_Keypad* Me )
+void Five_Buttons_Keypad__Cyclic( const Five_Buttons_Keypad_Sensor* Me )
 {
     T_Voltage_5 pin_voltage = 0;
     static E_Keypad_State keypad_state = KEYPAD_RELEASED;

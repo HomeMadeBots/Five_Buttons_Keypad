@@ -1,5 +1,5 @@
-#ifndef FIVE_BUTTONS_KEYPAD_H
-#define FIVE_BUTTONS_KEYPAD_H
+#ifndef FIVE_BUTTONS_KEYPAD_SENSOR_H
+#define FIVE_BUTTONS_KEYPAD_SENSOR_H
 
 
 /*============================================================================*/
@@ -35,19 +35,19 @@ typedef struct {
     Any_Button_Pressed Any_Button_Pressed;
 
     /* Configuration_Parameters */
-    T_Voltage No_Button_Threshold;
-    T_Voltage Select_Button_Threshold;
-    T_Voltage Left_Button_Threshold;
-    T_Voltage Down_Button_Threshold;
-    T_Voltage Up_Button_Threshold;
+    T_Voltage_5 No_Button_Threshold;
+    T_Voltage_5 Select_Button_Threshold;
+    T_Voltage_5 Left_Button_Threshold;
+    T_Voltage_5 Down_Button_Threshold;
+    T_Voltage_5 Up_Button_Threshold;
     
-} Five_Buttons_Keypad;
+} Five_Buttons_Keypad_Sensor;
 
 
 /*============================================================================*/
 /* Component_Operations */
 /*============================================================================*/
-void Five_Buttons_Keypad__Cyclic( const Five_Buttons_Keypad* Me );
+void Five_Buttons_Keypad__Cyclic( const Five_Buttons_Keypad_Sensor* Me );
 
 
 #endif

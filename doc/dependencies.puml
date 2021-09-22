@@ -1,0 +1,12 @@
+@startuml
+
+!includeurl https://gist.githubusercontent.com/Arnaud-Bonneuil/c317a7a30bed7d64e2b5b1f558ac00cf/raw/sober.puml
+
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Five_Buttons_Keypad/main/doc/Five_Buttons_Keypad.puml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Button_Events/main/doc/Button_Events.puml
+!includeurl https://raw.githubusercontent.com/HomeMadeBots/Hardware_IO_Interfaces/main/doc/Hardware_IO_Interfaces.puml
+
+Five_Buttons_Keypad ..> Button_Events
+Five_Buttons_Keypad ..> Hardware_IO_Interfaces
+
+@enduml
